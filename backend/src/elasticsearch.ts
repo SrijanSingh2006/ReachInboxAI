@@ -12,16 +12,14 @@ export const initElasticsearch = async () => {
     if (!indexExists) {
       await esClient.indices.create({
         index: 'emails',
-        body: {
-          mappings: {
-            properties: {
-              id: { type: 'keyword' },
-              recipient: { type: 'text' },
-              subject: { type: 'text' },
-              body: { type: 'text' },
-              status: { type: 'keyword' },
-              scheduledTime: { type: 'date' },
-            }
+        mappings: {
+          properties: {
+            id: { type: 'keyword' },
+            recipient: { type: 'text' },
+            subject: { type: 'text' },
+            body: { type: 'text' },
+            status: { type: 'keyword' },
+            scheduledTime: { type: 'date' },
           }
         }
       });

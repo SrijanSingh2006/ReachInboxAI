@@ -88,12 +88,10 @@ router.get('/emails/search', async (req, res) => {
   try {
     const result = await esClient.search({
       index: 'emails',
-      body: {
-        query: {
-          multi_match: {
-            query: q as string,
-            fields: ['subject', 'body', 'recipient']
-          }
+      query: {
+        multi_match: {
+          query: q as string,
+          fields: ['subject', 'body', 'recipient']
         }
       }
     });

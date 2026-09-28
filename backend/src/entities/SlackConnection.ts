@@ -3,14 +3,14 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 @Entity()
 export class SlackConnection {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id!: string;
 
   @Column({ type: 'varchar' })
-  senderId: string;
+  senderId!: string;
 
   @Column({ type: 'varchar' })
-  accessToken: string;
+  accessToken!: string;
 
   @Column({ type: 'varchar' })
-  webhookUrl: string;
+  webhookUrl!: string;
 }

@@ -3,32 +3,32 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 @Entity()
 export class ScheduledEmail {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id!: string;
 
   @Column({ type: 'varchar' })
-  recipient: string;
+  recipient!: string;
 
   @Column({ type: 'varchar' })
-  subject: string;
+  subject!: string;
 
   @Column({ type: 'text' })
-  body: string;
+  body!: string;
 
   @Column({ type: 'timestamp' })
-  scheduledTime: Date;
+  scheduledTime!: Date;
 
   @Column({ type: 'varchar', default: 'scheduled' })
-  status: string; // 'scheduled', 'sent', 'failed'
+  status!: string; // 'scheduled', 'sent', 'failed'
 
   @Column({ type: 'varchar', nullable: true })
-  jobId: string;
+  jobId!: string;
 
   @Column({ type: 'varchar', nullable: true })
-  senderId: string; // to track tenant/sender for rate limiting
+  senderId!: string; // to track tenant/sender for rate limiting
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 }
