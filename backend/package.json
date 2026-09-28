@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsx src/index.ts",
+    "dev": "nodemon src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@bull-board/api": "^9.10.1",
+    "@bull-board/express": "^9.10.1",
+    "@elastic/elasticsearch": "^9.5.1",
+    "axios": "^1.20.0",
+    "bullmq": "^6.3.9",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "ioredis": "^5.11.1",
+    "nodemailer": "^10.0.12",
+    "pg": "^8.23.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.3",
+    "@types/nodemailer": "^8.0.2",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
