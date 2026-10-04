@@ -20,8 +20,12 @@ out/
 *.db
 backend/reachinbox.db
 
-# OS / Editor files
+# OS / Editor / Generated files
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+AGENTS.md
+CLAUDE.md
+**/AGENTS.md
+**/CLAUDE.md
